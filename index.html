@@ -34,7 +34,8 @@
     async function loadData() {
       const search = document.getElementById('search').value.toLowerCase();
       const minSpread = parseFloat(document.getElementById('minSpread').value) || 0;
-      const res = await fetch('https://funding-arbitrage-backend.onrender.com/funding');
+      const res = await fetch('https://corsproxy.io/?https://funding-arbitrage-backend.onrender.com/funding');
+
       const data = await res.json();
       const tbody = document.getElementById('dataBody');
       tbody.innerHTML = '';
